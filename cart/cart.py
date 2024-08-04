@@ -16,7 +16,7 @@ class Cart:
 
     def add(self, product, quantity=1, override_quantity=False):
         '''
-        Add a product to the cart or update its quantity
+        Add a product to the cart or update its quantity.
         '''
         product_id = (product.id)
         if product_id not in self.cart:
