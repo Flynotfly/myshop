@@ -18,7 +18,7 @@ class Cart:
         '''
         Add a product to the cart or update its quantity.
         '''
-        product_id = (product.id)
+        product_id = str(product.id)
         if product_id not in self.cart:
             self.cart[product_id] = {
                 'quantity': 0,
