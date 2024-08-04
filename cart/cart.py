@@ -31,4 +31,7 @@ class Cart:
         self.save()
 
     def save(self):
+        '''
+        Mark session as modified.
+        '''
         self.session.modified = True
