@@ -18,6 +18,6 @@ def order_created(order_id):
         subject,
         message,
         'admin@myshop.com',
-        [order.emeil]
+        [order.email]
     )
     return mail_sent
