@@ -48,3 +48,10 @@ def completed(request):
         request,
         'payment/completed.html'
     )
+
+
+def canceled(request):
+    return render(
+        request,
+        'payment/canceled.html'
+    )
