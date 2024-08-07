@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,3 +134,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+OUR_PAYMENT_SERVER_API_VERSION = config('OUR_PAYMENT_SERVER_API_VERSION')
+OUR_PAYMENT_SERVER_API_SECRET_KEY = config('OUR_PAYMENT_SERVER_API_SECRET_KEY')
