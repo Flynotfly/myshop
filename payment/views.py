@@ -42,3 +42,9 @@ def process(request):
             locals()
         )
 
+
+def completed(request):
+    return render(
+        request,
+        'payment/completed.html'
+    )
