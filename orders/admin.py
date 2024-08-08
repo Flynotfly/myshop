@@ -55,6 +55,7 @@ class OrderAdmin(admin.ModelAdmin):
         'created',
         'updated',
         order_detail,
+        'get_total_cost',
     ]
     list_filter = ['paid', 'created', 'updated']
     inlines = [OrderItemInline]
