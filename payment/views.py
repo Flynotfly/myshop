@@ -39,7 +39,9 @@ def process(request):
         return render(
             request,
             'payment/process.html',
-            locals()
+            {
+                'order': order,
+            }
         )
 
 
