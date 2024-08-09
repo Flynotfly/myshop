@@ -69,8 +69,9 @@ class Cart:
         """
         return sum(item['quantity'] for item in self.cart.values())
 
-    def get_total_price(self):
-        return sum(Decimal(item['price']) * item['quantity'] for item in self.cart.values())
+    @property
+    def total_price(self) -> Decimal:
+        return sum((Decimal(item['price']) * item['quantity'] for item in self.cart.values()), start=Decimal(0))
 
     def clear(self):
         """
@@ -91,9 +92,9 @@ class Cart:
     @property
     def discount(self) -> Decimal:
         if self.coupon:
-            return self.coupon.discount / Decimal(100) * self.get_total_price()
+            return self.coupon.discount / Decimal(100) * self.total_price
         return Decimal(0)
 
     @property
     def total_price_after_discount(self) -> Decimal:
-        return self.get_total_price() - self.discount
+        return self.total_price - self.discount
