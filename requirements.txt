@@ -3,3 +3,4 @@ pillow==10.4.0
 celery==5.4.0
 flower==2.0.1
 python-decouple==3.8
+redis==5.0.8
