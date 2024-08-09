@@ -88,7 +88,8 @@ class Cart:
                 pass
         return None
 
-    def get_discount(self) -> Decimal:
+    @property
+    def discount(self) -> Decimal:
         if self.coupon:
             return self.coupon.discount / Decimal(100) * self.get_total_price()
         return Decimal(0)
