@@ -18,7 +18,7 @@
             {% if cart.coupon %}
                 <li>
                     "{{ cart.coupon.code }}" ({{ cart.coupon.discount }}% off)
-                    <span class="neg">- ${{ cart.get_discount|floatformat:2 }}</span>
+                    <span class="neg">- ${{ cart.discount|floatformat:2 }}</span>
                 </li>
             {% endif %}
         </ul>
