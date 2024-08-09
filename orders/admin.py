@@ -62,7 +62,7 @@ class OrderAdmin(admin.ModelAdmin):
         'paid',
         'created',
         'updated',
-        'get_total_cost',
+        'total_cost',
         order_detail,
         order_pdf,
     ]
