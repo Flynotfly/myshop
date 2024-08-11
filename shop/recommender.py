@@ -49,6 +49,6 @@ class Recommender:
         for id in Product.objects.values_list('id', flat=True):
             r.delete(self.get_product_key(id))
 
-    def clear_purchases_by_id(self, products_ids: Iterable[Product]) -> None:
+    def clear_purchases_by_id(self, products_ids: Iterable[str]) -> None:
         for id in products_ids:
             r.delete(self.get_product_key(id))
