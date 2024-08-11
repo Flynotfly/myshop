@@ -70,6 +70,14 @@
             </tr>
         </tbody>
     </table>
+    {% if recommended_products %}
+        <div class="recommendations cart">
+            <h3>People who bought this also bought</h3>
+            {% for p in recommended_products %}
+            	{% include 'shop/product/includes/recommended.html' %}
+            {% endfor %}
+        </div>
+    {% endif %}
     <p>Apply a coupon:</p>
     <form action="{% url 'coupons:apply' %}" method="post">
         {{ coupon_apply_form }}
