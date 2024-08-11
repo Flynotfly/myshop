@@ -25,10 +25,7 @@
         {{ product.description|linebreaks }}
         {% if recommended_products %}
         	<div class="recommendations">
-                <h3>{% translate 'People who bought this also bought' %}</h3>
-                {% for p in recommended_products %}
-                	{% include 'shop/product/includes/recommended.html' %}
-                {% endfor %}
+                {% include 'shop/product/includes/recommended.html' %}
             </div>
         {% endif %}
     </div>
