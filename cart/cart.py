@@ -78,7 +78,10 @@ class Cart:
         Remove cart from session.
         """
         del self.session[settings.CART_SESSION_ID]
-        del self.session['coupon_id']
+        try:
+            del self.session['coupon_id']
+        except KeyError:
+            pass
         self.save()
 
     @property
