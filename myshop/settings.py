@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'coupons.apps.CouponsConfig',
     'rosetta',
+    'parler',
 ]
 
 MIDDLEWARE = [
